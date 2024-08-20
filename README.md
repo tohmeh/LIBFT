@@ -34,7 +34,7 @@ This project is divided into three parts:
 - `ft_strchr` - Locate a character in a string.
 - `ft_strrchr` - Locate the last occurrence of a character in a string.
 - `ft_strncmp` - Compare two strings up to a specified length.
-
+-.....
 ### Part 2: Utility Functions
 
 - `ft_itoa` - Convert an integer to a string.
@@ -46,10 +46,11 @@ This project is divided into three parts:
 - `ft_putstr_fd` - Write a string to a file descriptor.
 - `ft_putendl_fd` - Write a string to a file descriptor, followed by a newline.
 - `ft_putnbr_fd` - Write an integer to a file descriptor.
-
+-.....
 ### Part 3: Bonus Functions
 
 - `get_next_line` - Read a line from a file descriptor.
+- `ft_printf` - printf function . 
 - `ft_lstnew` - Create a new list element.
 - `ft_lstadd_front` - Add a new element at the beginning of a list.
 - `ft_lstadd_back` - Add a new element at the end of a list.
