@@ -64,6 +64,6 @@ This project is divided into three parts:
 To use the Libft library in your project, clone the repository and compile the library using `make`:
 
 ```bash
-git clone https://github.com/yourusername/libft.git
+git clone https://github.com/tohmeh/libft.git
 cd libft
 make
