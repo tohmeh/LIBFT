@@ -6,16 +6,16 @@
 /*   By: mtohmeh <mtohmeh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 14:04:16 by mtohmeh           #+#    #+#             */
-/*   Updated: 2024/08/02 15:25:59 by mtohmeh          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:01:10 by mtohmeh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/LIBFT.h"
 
-void	retrieve_from_list_helper(char_list **head, char *result)
+void	retrieve_from_list_helper(t_char_list **head, char *result)
 {
-	int		i;
-	char_list	*to_free;
+	int			i;
+	t_char_list	*to_free;
 
 	i = 0;
 	while (*head && (*head)->content != '\n')
@@ -35,7 +35,7 @@ void	retrieve_from_list_helper(char_list **head, char *result)
 	result[i] = '\0';
 }
 
-char	*retrieve_from_list(char_list **head)
+char	*retrieve_from_list(t_char_list **head)
 {
 	char	*result;
 
@@ -48,7 +48,7 @@ char	*retrieve_from_list(char_list **head)
 	return (result);
 }
 
-void	read_to_list(int fd, char_list **list, int *feof)
+void	read_to_list(int fd, t_char_list **list, int *feof)
 {
 	char	buffer[BUFFER_SIZE];
 	int		bytes_read;
@@ -78,9 +78,9 @@ void	read_to_list(int fd, char_list **list, int *feof)
 
 char	*get_next_line(int fd)
 {
-	static char_list	*new = NULL;
-	static int		feof = 1;
-	char			*str;
+	static t_char_list	*new = NULL;
+	static int			feof = 1;
+	char				*str;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);

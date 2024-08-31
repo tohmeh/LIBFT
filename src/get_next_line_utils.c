@@ -6,15 +6,15 @@
 /*   By: mtohmeh <mtohmeh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 13:54:29 by mtohmeh           #+#    #+#             */
-/*   Updated: 2024/08/02 15:23:57 by mtohmeh          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:01:10 by mtohmeh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/LIBFT.h"
 
-void	lstadd_back(char_list **lst, char_list *new)
+void	lstadd_back(t_char_list **lst, t_char_list *new)
 {
-	char_list	*temp;
+	t_char_list	*temp;
 
 	if (!lst || !new)
 		return ;
@@ -31,11 +31,11 @@ void	lstadd_back(char_list **lst, char_list *new)
 	temp->next = new;
 }
 
-char_list	*lstnew(char content)
+t_char_list	*lstnew(char content)
 {
-	char_list	*new;
+	t_char_list	*new;
 
-	new = malloc(sizeof(char_list));
+	new = malloc(sizeof(t_char_list));
 	if (!new)
 		return (NULL);
 	new->content = content;
@@ -43,10 +43,10 @@ char_list	*lstnew(char content)
 	return (new);
 }
 
-int	lstsize(char_list *lst)
+int	lstsize(t_char_list *lst)
 {
-	char_list	*temp;
-	int		count;
+	t_char_list	*temp;
+	int			count;
 
 	count = 0;
 	temp = lst;
@@ -58,7 +58,7 @@ int	lstsize(char_list *lst)
 	return (count);
 }
 
-int	exists(char_list *head)
+int	exists(t_char_list *head)
 {
 	while (head)
 	{

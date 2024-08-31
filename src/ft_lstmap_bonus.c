@@ -6,15 +6,15 @@
 /*   By: mtohmeh <mtohmeh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/16 19:27:57 by mtohmeh           #+#    #+#             */
-/*   Updated: 2024/08/02 15:23:36 by mtohmeh          ###   ########.fr       */
+/*   Updated: 2024/08/12 11:03:50 by mtohmeh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/LIBFT.h"
 
-void_list	*ft_lstmap(void_list *lst, void *(*f)(void *), void (*del)(void *))
+t_voidlst	*ft_lstmap(t_voidlst *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void_list	*new;
+	t_voidlst	*new;
 
 	new = NULL;
 	while (lst)
